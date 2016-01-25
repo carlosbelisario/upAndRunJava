@@ -59,6 +59,12 @@ public class ChallengeOne {
         System.out.println("Please insert the height of the doors");
         doorsHeight = in.nextInt();
         
+        int houseArea = houseWidth * houseHeight * 2 + houseLength * houseHeight * 2;
+        System.out.println("ha" + houseArea);
+        int windowArea = numberOfWindows * windowsWidth * windowsHeight;
+        System.out.println("wa" + windowArea);
+        int doorArea = numberOfDoors * doorsWidth * doorsHeight;
+        System.out.println("da" + doorArea);
         surfaceArea = (houseWidth * houseHeight * 2 + houseLength * houseHeight * 2) 
                 - (numberOfWindows * windowsWidth * windowsHeight + 
                 numberOfDoors * doorsWidth * doorsHeight);

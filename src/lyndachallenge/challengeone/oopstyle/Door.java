@@ -10,7 +10,7 @@ package lyndachallenge.challengeone.oopstyle;
  *
  * @author carlos belisario <carlos.belisario.gonzalez@gmail.com>
  */
-public class Door {
+public class Door implements AttributeAreaCalculable {
      /**
      * @var int
      */
@@ -19,26 +19,43 @@ public class Door {
     /**
      * @var int
      */
-    private int heigth;
+    private int height;
+    
+    public Door() {        
+    }
     
     public Door(int width, int height) {
         this.width = width;
-        this.heigth = height;
+        this.height = height;
     }
 
+    @Override
     public int getWidth() {
         return width;
     }
 
+    @Override
     public void setWidth(int width) {
         this.width = width;
     }
 
-    public int getHeigth() {
-        return heigth;
+    @Override
+    public int getHeight() {
+        return height;
     }
 
-    public void setHeigth(int heigth) {
-        this.heigth = heigth;
+    @Override
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    @Override
+    public int calculateArea() {
+        return width * height;
+    }
+    
+    @Override
+    public String toString() {
+        return "Door";
     }
 }

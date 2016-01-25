@@ -7,12 +7,13 @@
 package lyndachallenge.challengeone.oopstyle;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
  * @author carlos belisario <carlos.belisario.gonzalez@gmail.com>
  */
-public class House {
+public class House implements AreaCalculable {
     
     /**
      * @var int length
@@ -43,6 +44,8 @@ public class House {
         this.length = length;
         this.width = width;
         this.height = height;
+        this.window = new ArrayList<>();
+        this.door = new ArrayList<>();
     }
     
     /**
@@ -50,7 +53,7 @@ public class House {
      * @param window
      * @return 
      */
-    public House addWindow(Window window) {
+    public House addWindow(Window window) {        
         this.window.add(window);
         return this;
     }
@@ -70,5 +73,32 @@ public class House {
     
     public ArrayList<Door> getDoor() {
         return door;
+    }    
+    
+    /**
+     * 
+     * @return 
+     */
+    public int surfaceArea() {
+        Iterator<Window> windowIterator = window.iterator();
+        Iterator<Door> doorIterator = door.iterator();        
+        int windowArea = 0;
+        int doorArea = 0;
+        while(windowIterator.hasNext()) {            
+            windowArea += windowIterator.next().calculateArea();
+        }
+        windowArea *= window.size();
+        
+        while(doorIterator.hasNext()) {            
+            doorArea += doorIterator.next().calculateArea();
+        }
+        doorArea *= window.size();
+        return calculateArea() - (windowArea + doorArea);
     }
+    
+    @Override
+    public int calculateArea() {        
+        return width * height * 2 + length * height * 2;
+    }
+            
 }
