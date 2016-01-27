@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package lyndachallenge.challengeone.oopstyle;
 
 import java.util.Scanner;
@@ -37,6 +31,12 @@ public class SurfaceAreaCalcuate {
         System.out.println("The source Area is: " + surfaceArea);
     }
     
+    /**
+     * create menu for insert the attributes value of the windows / doors 
+     * @param attribute
+     * @param house
+     * @return 
+     */
     public static House menu(AttributeAreaCalculable attribute, House house) {
         Scanner in = new Scanner(System.in);
         boolean hasAttribute = true;

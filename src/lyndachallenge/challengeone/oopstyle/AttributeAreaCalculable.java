@@ -1,36 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package lyndachallenge.challengeone.oopstyle;
 
 /**
  *
- * @author carlos
+ * @author carlos belisario <carlos.belisario.gonzalez@gmail.com>
  */
 public interface AttributeAreaCalculable extends AreaCalculable {
     /**
-     * 
+     * set the width of the object
      * @param width 
      */
     public void setWidth(int width);    
     
     /**
-     * 
+     * get the with of the object
      * @return int
      */
     public int getWidth();
     
     /**
-     * 
-     * @param width 
+     * set the height of a object
+     * @param height 
      */
     public void setHeight(int height);    
     
     /**
-     * 
+     * get the height ob a object
      * @return int
      */
     public int getHeight();

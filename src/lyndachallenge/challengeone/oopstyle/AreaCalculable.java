@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package lyndachallenge.challengeone.oopstyle;
 
 /**
@@ -12,7 +6,7 @@ package lyndachallenge.challengeone.oopstyle;
  */
 public interface AreaCalculable {
     /**
-     * 
+     * calculate the area of a object
      * @return int
      */
     public int calculateArea();

@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package lyndachallenge.challengeone.oopstyle;
 
 /**
@@ -21,9 +15,17 @@ public class Door implements AttributeAreaCalculable {
      */
     private int height;
     
+    /**
+     * void construct
+     */
     public Door() {        
     }
     
+    /**
+     * 
+     * @param width
+     * @param height 
+     */
     public Door(int width, int height) {
         this.width = width;
         this.height = height;
